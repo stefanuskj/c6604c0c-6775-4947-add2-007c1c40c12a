@@ -5,27 +5,6 @@ package acer.coding.challenge.beans.json;
 
 import java.util.List;
 
-
-
-// Read assessment and questions -> AssessmentFileReader - (filename: string) => Assessment
-// Assessment -> ID, Name, Questions
-// Questions -> id, name strand, options etc
-// StudentFileReader -> (studentId: string) => Student
-// Student -> FirstName lastName + List<StudentResponse>
-
-// StudentResponse
-// - AssessmentId
-// - Date completion etc
-
-
-// DiagnosticReportGenerator => (Assessment, Student) => 
-
-// DiagnosticReport
-// List<{ strand: string, totalQuestion, rawScore)>
-// Numeracy and Algebra: 5 out of 5 correct
-// Measurement and Geometry: 7 out of 7 correct
-// Statistics and Probability: 3 out of 4 correct  
-
 /**
  * @author stefanuskj
  *
