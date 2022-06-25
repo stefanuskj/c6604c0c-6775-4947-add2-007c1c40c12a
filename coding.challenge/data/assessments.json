@@ -8,49 +8,49 @@
         "position": 1
       }, {
         "questionId": "numeracy2",
-        "response": "option4"
+        "position": 2
       }, {
         "questionId": "numeracy3",
-        "response": "option2"
+        "position": 3
       }, {
         "questionId": "numeracy4",
-        "response": "option2"
+        "position": 4
       }, {
         "questionId": "numeracy5",
-        "response": "option3"
+        "position": 5
       }, {
         "questionId": "numeracy6",
-        "response": "option3"
+        "position": 6
       }, {
         "questionId": "numeracy7",
-        "response": "option4"
+        "position": 7
       }, {
         "questionId": "numeracy8",
-        "response": "option4"
+        "position": 8
       }, {
         "questionId": "numeracy9",
-        "response": "option2"
+        "position": 9
       }, {
         "questionId": "numeracy10",
-        "response": "option2"
+        "position": 10
       }, {
         "questionId": "numeracy11",
-        "response": "option2"
+        "position": 11
       }, {
         "questionId": "numeracy12",
-        "response": "option2"
+        "position": 12
       }, {
         "questionId": "numeracy13",
-        "response": "option3"
+        "position": 13
       }, {
         "questionId": "numeracy14",
-        "response": "option1"
+        "position": 14
       }, {
         "questionId": "numeracy15",
-        "response": "option2"
+        "position": 15
       }, {
         "questionId": "numeracy16",
-        "response": "option2"
+        "position": 16
       }
     ]
   }
