@@ -28,7 +28,7 @@ import acer.coding.challenge.utils.ReportGeneratorUtils;
  *
  */
 public class FeedbackReportGenerator {
-	public static FeedbackReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails, StudentResponse latestStudentResponse) throws ParseException {
+	public static FeedbackReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails, StudentResponse latestStudentResponse) throws ParseException, NullPointerException {
 		FeedbackReport feedbackReport = new FeedbackReport();
 		StrandDetails strandDetails = new StrandDetails();
 		List<FeedbackReportDetails> listOfFeedbackReportDetails = new ArrayList<FeedbackReportDetails>();

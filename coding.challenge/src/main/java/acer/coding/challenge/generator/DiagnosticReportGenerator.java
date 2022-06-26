@@ -24,7 +24,7 @@ import acer.coding.challenge.utils.ReportGeneratorUtils;
  *
  */
 public class DiagnosticReportGenerator {
-	public static DiagnosticReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails, StudentResponse latestStudentResponse) throws ParseException {
+	public static DiagnosticReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails, StudentResponse latestStudentResponse) throws ParseException, NullPointerException {
 		DiagnosticReport diagnosticReport = new DiagnosticReport();
 		List<StrandDetails> listOfStrandDetails = new ArrayList<StrandDetails>();
 		Calendar calendar = Calendar.getInstance();

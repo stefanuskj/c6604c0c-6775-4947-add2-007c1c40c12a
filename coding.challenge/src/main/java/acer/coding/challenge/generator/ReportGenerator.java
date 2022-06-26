@@ -29,7 +29,7 @@ import acer.coding.challenge.utils.ReportGeneratorUtils;
  *
  */
 public class ReportGenerator {
-	public static Report generator(String studentId, int reportToGenerate, Properties properties) throws DataNotFoundException, NumberFormatException, ParseException, AssessmentFileNotFoundException, QuestionFileNotFoundException, StudentFileNotFoundException, StudentResponseFileNotFoundException {
+	public static Report generator(String studentId, int reportToGenerate, Properties properties) throws DataNotFoundException, NumberFormatException, ParseException, AssessmentFileNotFoundException, QuestionFileNotFoundException, StudentFileNotFoundException, StudentResponseFileNotFoundException, NullPointerException {
 		Report report = new Report();
 		Student student = JsonHelper.getStudentById(studentId, properties.getStudentDataFilePath());
 		StudentResponseDetails studentResponseDetails = ReportGeneratorHelper.getStudentResponseDetails(student, properties.getStudentResponseDataFilePath());

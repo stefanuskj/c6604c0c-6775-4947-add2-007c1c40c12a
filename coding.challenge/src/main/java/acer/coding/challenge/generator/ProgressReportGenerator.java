@@ -23,7 +23,7 @@ import acer.coding.challenge.utils.ReportGeneratorUtils;
  *
  */
 public class ProgressReportGenerator {
-	public static ProgressReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails) throws ParseException, DataNotFoundException {
+	public static ProgressReport generator(AssessmentDetails assessmentDetails, StudentResponseDetails studentResponseDetails) throws ParseException, DataNotFoundException, NullPointerException {
 		ProgressReport progressReport = new ProgressReport();
 		int lowestScore = 0;
 		int highestScore = 0;

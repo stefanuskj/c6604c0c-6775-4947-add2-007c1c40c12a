@@ -65,6 +65,8 @@ public class App
     			System.out.println("Wrong format to parse \n"+e.getMessage());
     		} catch (InputMismatchException e) {
     			System.out.println("Please enter numeric character only \n");
+    		} catch (NullPointerException e) {
+    			System.out.println("Null in the generator parameter\n");
     		}
     	}
     	userInput.close();
