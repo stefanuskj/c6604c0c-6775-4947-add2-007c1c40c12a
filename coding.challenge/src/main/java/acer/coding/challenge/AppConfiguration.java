@@ -20,6 +20,7 @@ public class AppConfiguration {
 	private static final String ASSESSMENT_DATA_FILE_PATH = "assessment_data_file_path";
 	private static final String QUESTION_DATA_FILE_PATH = "question_data_file_path";
 	private static final String STUDENT_RESPONSE_DATA_FILE_PATH = "student_response_data_file_path";
+	private static final String ASSESSMENT_ID = "assessment_id";
 	private static final String DEFAULT_PROPERTIES_FILE = "./properties/acer.properties";
 	
 	public static Properties initProperties() throws MissingPropertiesException, FileNotFoundException {
@@ -45,6 +46,9 @@ public class AppConfiguration {
 					}
 					else if (key.equals(STUDENT_RESPONSE_DATA_FILE_PATH)) {
 						filePath.setStudentResponseDataFilePath(value);
+					}
+					else if (key.equals(ASSESSMENT_ID)) {
+						filePath.setAssessmentId(value);
 					}
 				}
 				else {

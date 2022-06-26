@@ -12,6 +12,7 @@ public class Properties {
 	private String _assessmentDataFilePath;
 	private String _questionDataFilePath;
 	private String _studentResponseDataFilePath;
+	private String _assessmentId;
 	/**
 	 * @return the _studentDataFilePath
 	 */
@@ -60,17 +61,31 @@ public class Properties {
 	public void setStudentResponseDataFilePath(String studentResponseDataFilePath) {
 		this._studentResponseDataFilePath = studentResponseDataFilePath;
 	}
+	/**
+	 * @return the _assessmentId
+	 */
+	public String getAssessmentId() {
+		return _assessmentId;
+	}
+	/**
+	 * @param _assessmentId the _assessmentId to set
+	 */
+	public void setAssessmentId(String _assessmentId) {
+		this._assessmentId = _assessmentId;
+	}
 	@Override
 	public String toString() {
 		return "Properties [_studentDataFilePath=" + _studentDataFilePath + ", _assessmentDataFilePath="
 				+ _assessmentDataFilePath + ", _questionDataFilePath=" + _questionDataFilePath
-				+ ", _studentResponseDataFilePath=" + _studentResponseDataFilePath + "]";
+				+ ", _studentResponseDataFilePath=" + _studentResponseDataFilePath + ", _assessmentId=" + _assessmentId
+				+ "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((_assessmentDataFilePath == null) ? 0 : _assessmentDataFilePath.hashCode());
+		result = prime * result + ((_assessmentId == null) ? 0 : _assessmentId.hashCode());
 		result = prime * result + ((_questionDataFilePath == null) ? 0 : _questionDataFilePath.hashCode());
 		result = prime * result + ((_studentDataFilePath == null) ? 0 : _studentDataFilePath.hashCode());
 		result = prime * result
@@ -90,6 +105,11 @@ public class Properties {
 			if (other._assessmentDataFilePath != null)
 				return false;
 		} else if (!_assessmentDataFilePath.equals(other._assessmentDataFilePath))
+			return false;
+		if (_assessmentId == null) {
+			if (other._assessmentId != null)
+				return false;
+		} else if (!_assessmentId.equals(other._assessmentId))
 			return false;
 		if (_questionDataFilePath == null) {
 			if (other._questionDataFilePath != null)

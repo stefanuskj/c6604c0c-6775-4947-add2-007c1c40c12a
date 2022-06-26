@@ -40,6 +40,8 @@ public class ReportGenerator {
 			report.setDiagnosticReport(DiagnosticReportGenerator.generator(assessmentDetails, studentResponseDetails, latestStudentResponse));
 		}
 		else if (reportToGenerate == 2) {
+			assessment = JsonHelper.getAssessmentById(properties.getAssessmentId(), properties.getAssessmentDataFilePath());
+			assessmentDetails = ReportGeneratorHelper.getAssessmentDetails(assessment, properties.getQuestionDataFilePath());
 			report.setProgressReport(ProgressReportGenerator.generator(assessmentDetails, studentResponseDetails));
 		}
 		else if (reportToGenerate == 3) {
