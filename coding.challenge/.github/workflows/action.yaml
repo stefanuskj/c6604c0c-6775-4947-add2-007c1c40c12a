@@ -8,9 +8,9 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
-          java-version: '17'
+          java-version: '8'
       - name: Build
-        run: mvn --batch-mode -DskipTests package
+        run: mvn --batch-mode -DskipTests package --file pom.xml
 
       - name: Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
