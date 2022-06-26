@@ -25,10 +25,10 @@ public class ReportGeneratorHelper {
 	public static AssessmentDetails getAssessmentDetails(Assessment assessment, String questionDataFilePath) throws DataNotFoundException, QuestionFileNotFoundException {
 		AssessmentDetails assessmentDetails = new AssessmentDetails();
 		List<Question> listOfQuestions = new ArrayList<Question>();
-		List<AssessmentQuestion> listOfAssessmentQuestions = assessment.getListOfQuestions();
-		if (listOfAssessmentQuestions.size() < 1) {
+		if (assessment.getListOfQuestions()==null) {
 			throw new DataNotFoundException("Assessment Questions data not found for AssessmentID: "+assessment.getAssessmentId());
 		}
+		List<AssessmentQuestion> listOfAssessmentQuestions = assessment.getListOfQuestions();
 		for (int i = 0; i < listOfAssessmentQuestions.size(); i++) {
 			Question question = new Question();
 			question =  JsonHelper.getQuestionById(listOfAssessmentQuestions.get(i).getQuestionId(), questionDataFilePath);
