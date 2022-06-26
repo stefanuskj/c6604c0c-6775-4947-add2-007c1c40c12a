@@ -30,9 +30,9 @@ public class AppConfiguration {
 			fileReader = new Scanner(propertiesFile);
 			while (fileReader.hasNextLine()) {
 				String line = fileReader.nextLine();
-				String[] temp = line.split("=");
-				String value = temp[1];
-				String key = temp[0];
+				String[] keyValueArray = line.split("=");
+				String key = keyValueArray[0];
+				String value = keyValueArray[1];
 				if (key!=null || !value.equals("")) {
 					if (key.equals(STUDENT_DATA_FILE_PATH)) {
 						filePath.setStudentDataFilePath(value);
@@ -48,7 +48,7 @@ public class AppConfiguration {
 					}
 				}
 				else {
-					throw new MissingPropertiesException("Missing "+key+" value");
+					throw new MissingPropertiesException("Missing "+key+" key");
 				}
 			}
 		} finally {
