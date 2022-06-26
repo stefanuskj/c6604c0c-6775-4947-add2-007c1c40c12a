@@ -11,76 +11,86 @@ import java.util.List;
  *
  */
 public class StrandDetails {
-	private int _strandTotal;
-	private List<String> _correctAnswer;
-	private List<String> _wrongAnswer;
+	private String strandName;
+	private int strandTotal;
+	private List<String> correctAnswer;
+	private List<String> wrongAnswer;
 	
 	public StrandDetails() {
-		this._strandTotal = 0;
-		this._correctAnswer = new ArrayList<String>();
-		this._wrongAnswer = new ArrayList<String>();
+		this.setStrandName("");
+		this.strandTotal = 0;
+		this.correctAnswer = new ArrayList<String>();
+		this.wrongAnswer = new ArrayList<String>();
 	}
-	
 	/**
-	 * @return the _strandTotal
+	 * @return the strandName
+	 */
+	public String getStrandName() {
+		return strandName;
+	}
+
+	/**
+	 * @param strandName the strandName to set
+	 */
+	public void setStrandName(String strandName) {
+		this.strandName = strandName;
+	}
+	/**
+	 * @return the strandTotal
 	 */
 	public int getStrandTotal() {
-		return _strandTotal;
+		return strandTotal;
 	}
 	/**
-	 * @param strandTotal the _strandTotal to set
+	 * @param strandTotal the strandTotal to set
 	 */
 	public void setStrandTotal(int strandTotal) {
-		this._strandTotal = strandTotal;
+		this.strandTotal = strandTotal;
 	}
 	/**
-	 * @return the _correctAnswer
+	 * @return the correctAnswer
 	 */
 	public List<String> getCorrectAnswer() {
-		return _correctAnswer;
+		return correctAnswer;
 	}
 	/**
-	 * @param correctAnswer the _correctAnswer to set
+	 * @param correctAnswer the correctAnswer to set
 	 */
 	public void setCorrectAnswer(List<String> correctAnswer) {
-		this._correctAnswer = correctAnswer;
+		this.correctAnswer = correctAnswer;
 	}
 	/**
-	 * @return the _wrongAnswer
+	 * @return the wrongAnswer
 	 */
 	public List<String> getWrongAnswer() {
-		return _wrongAnswer;
+		return wrongAnswer;
 	}
 	/**
-	 * @param wrongAnswer the _wrongAnswer to set
+	 * @param wrongAnswer the wrongAnswer to set
 	 */
 	public void setWrongAnswer(List<String> wrongAnswer) {
-		this._wrongAnswer = wrongAnswer;
+		this.wrongAnswer = wrongAnswer;
 	}
 	/**
-	 * @param questionId the _correctAnswer to set
+	 * @param questionId the correctAnswer to set
 	 */
 	public void addCorrectAnswer(String questionId) {
-		this._correctAnswer.add(questionId);
+		this.correctAnswer.add(questionId);
 	}
 	/**
-	 * @param questionId the _wrongAnswer to set
+	 * @param questionId the wrongAnswer to set
 	 */
 	public void addWrongAnswer(String questionId) {
-		this._wrongAnswer.add(questionId);
-	}
-	@Override
-	public String toString() {
-		return "StrandDetails [_strandTotal=" + _strandTotal + ", _correctAnswer="
-				+ _correctAnswer + ", _wrongAnswer=" + _wrongAnswer + "]";
+		this.wrongAnswer.add(questionId);
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((_correctAnswer == null) ? 0 : _correctAnswer.hashCode());
-		result = prime * result + _strandTotal;
-		result = prime * result + ((_wrongAnswer == null) ? 0 : _wrongAnswer.hashCode());
+		result = prime * result + ((correctAnswer == null) ? 0 : correctAnswer.hashCode());
+		result = prime * result + ((strandName == null) ? 0 : strandName.hashCode());
+		result = prime * result + strandTotal;
+		result = prime * result + ((wrongAnswer == null) ? 0 : wrongAnswer.hashCode());
 		return result;
 	}
 	@Override
@@ -92,19 +102,31 @@ public class StrandDetails {
 		if (getClass() != obj.getClass())
 			return false;
 		StrandDetails other = (StrandDetails) obj;
-		if (_correctAnswer == null) {
-			if (other._correctAnswer != null)
+		if (correctAnswer == null) {
+			if (other.correctAnswer != null)
 				return false;
-		} else if (!_correctAnswer.equals(other._correctAnswer))
+		} else if (!correctAnswer.equals(other.correctAnswer))
 			return false;
-		if (_strandTotal != other._strandTotal)
-			return false;
-		if (_wrongAnswer == null) {
-			if (other._wrongAnswer != null)
+		if (strandName == null) {
+			if (other.strandName != null)
 				return false;
-		} else if (!_wrongAnswer.equals(other._wrongAnswer))
+		} else if (!strandName.equals(other.strandName))
+			return false;
+		if (strandTotal != other.strandTotal)
+			return false;
+		if (wrongAnswer == null) {
+			if (other.wrongAnswer != null)
+				return false;
+		} else if (!wrongAnswer.equals(other.wrongAnswer))
 			return false;
 		return true;
 	}
+	
+	@Override
+	public String toString() {
+		return "StrandDetails [strandName=" + strandName + ", strandTotal=" + strandTotal + ", correctAnswer="
+				+ correctAnswer + ", wrongAnswer=" + wrongAnswer + "]";
+	}
+	
 	
 }
