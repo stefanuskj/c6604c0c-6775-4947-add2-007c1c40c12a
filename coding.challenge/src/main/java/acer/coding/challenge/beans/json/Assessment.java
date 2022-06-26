@@ -35,7 +35,7 @@ public class Assessment {
 	/**
 	 * @param assessmentName the _assessmentName to set
 	 */
-	public void set_assessmentName(String assessmentName) {
+	public void setAssessmentName(String assessmentName) {
 		this.name = assessmentName;
 	}
 	/**
