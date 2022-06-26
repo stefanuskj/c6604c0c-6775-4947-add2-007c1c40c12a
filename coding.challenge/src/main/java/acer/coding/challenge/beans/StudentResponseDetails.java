@@ -14,7 +14,7 @@ import acer.coding.challenge.beans.json.StudentResponse;
  */
 public class StudentResponseDetails {
 	private Student student;
-	private List<StudentResponse> listOfStudentResponse;
+	private List<StudentResponse> listOfStudentResponses;
 	/**
 	 * @return the student
 	 */
@@ -30,24 +30,24 @@ public class StudentResponseDetails {
 	/**
 	 * @return the listOfStudentResponse
 	 */
-	public List<StudentResponse> getListOfStudentResponse() {
-		return listOfStudentResponse;
+	public List<StudentResponse> getListOfStudentResponses() {
+		return listOfStudentResponses;
 	}
 	/**
 	 * @param listOfStudentResponse the listOfStudentResponse to set
 	 */
-	public void setListOfStudentResponse(List<StudentResponse> listOfStudentResponse) {
-		this.listOfStudentResponse = listOfStudentResponse;
+	public void setListOfStudentResponses(List<StudentResponse> listOfStudentResponses) {
+		this.listOfStudentResponses = listOfStudentResponses;
 	}
 	@Override
 	public String toString() {
-		return "StudentResponseDetails [student=" + student + ", listOfStudentResponse=" + listOfStudentResponse + "]";
+		return "StudentResponseDetails [student=" + student + ", listOfStudentResponses=" + listOfStudentResponses + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((listOfStudentResponse == null) ? 0 : listOfStudentResponse.hashCode());
+		result = prime * result + ((listOfStudentResponses == null) ? 0 : listOfStudentResponses.hashCode());
 		result = prime * result + ((student == null) ? 0 : student.hashCode());
 		return result;
 	}
@@ -60,10 +60,10 @@ public class StudentResponseDetails {
 		if (getClass() != obj.getClass())
 			return false;
 		StudentResponseDetails other = (StudentResponseDetails) obj;
-		if (listOfStudentResponse == null) {
-			if (other.listOfStudentResponse != null)
+		if (listOfStudentResponses == null) {
+			if (other.listOfStudentResponses != null)
 				return false;
-		} else if (!listOfStudentResponse.equals(other.listOfStudentResponse))
+		} else if (!listOfStudentResponses.equals(other.listOfStudentResponses))
 			return false;
 		if (student == null) {
 			if (other.student != null)
