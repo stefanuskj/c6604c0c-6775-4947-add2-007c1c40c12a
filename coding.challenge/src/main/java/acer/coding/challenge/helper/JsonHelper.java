@@ -49,7 +49,7 @@ public class JsonHelper {
 		} finally {
 			try {
 				reader.close();
-			} catch (IOException e) {
+			} catch (IOException | NullPointerException e) {
 				throw new AssessmentFileNotFoundException("Assessment data file not found");
 			}
 		}
@@ -79,7 +79,7 @@ public class JsonHelper {
 		} finally {
 			try {
 				reader.close();
-			} catch (IOException e) {
+			} catch (IOException | NullPointerException e) {
 				throw new StudentFileNotFoundException("Student data file not found");
 			}
 		}
@@ -109,7 +109,7 @@ public class JsonHelper {
 		} finally {
 			try {
 				reader.close();
-			} catch (IOException e) {
+			} catch (IOException | NullPointerException e) {
 				throw new QuestionFileNotFoundException("Question data file not found");
 			}
 		}
@@ -140,7 +140,7 @@ public class JsonHelper {
 		} finally {
 			try {
 				reader.close();
-			} catch (IOException e) {
+			} catch (IOException | NullPointerException e) {
 				throw new StudentResponseFileNotFoundException("Student Response data file not found");
 			}
 		}
@@ -149,10 +149,5 @@ public class JsonHelper {
 		}
 		return listOfStudentResponse;
 	}
-	
-	public static boolean isNumber (char character) {
-		return character >= 0 && character <= 9;
-	}
-	
-	
+		
 }
