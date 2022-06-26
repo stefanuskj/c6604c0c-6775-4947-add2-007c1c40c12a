@@ -89,14 +89,12 @@ public class ReportGeneratorUtils {
 			if (studentResponseId.equals("")) {
 				studentResponseId = temp.getStudentResponseId();
 				completedDate = temp.getCompleted();
-				continue;
 			}
-			else {
-				if (DateUtils.dateComparator(temp.getCompleted(), completedDate)) {
-					completedDate = temp.getCompleted();
-					studentResponseId = temp.getStudentResponseId();
-				} 
-			}
+			else if (DateUtils.dateComparator(temp.getCompleted(), completedDate)) {
+				completedDate = temp.getCompleted();
+				studentResponseId = temp.getStudentResponseId();
+			} 
+			
 		}
 		return studentResponseId;
 	}
