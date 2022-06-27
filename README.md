@@ -1,6 +1,8 @@
 # c6604c0c-6775-4947-add2-007c1c40c12a
 Acer Coding Challenge
 
+This repository is embedded with Java CI (automated testing every push process happening)
+
 How to run this application:
 1. You need Java IDE (Ex: Eclipse) with a minimum JDK1.8 installed
 2. After that import the project as a maven project
