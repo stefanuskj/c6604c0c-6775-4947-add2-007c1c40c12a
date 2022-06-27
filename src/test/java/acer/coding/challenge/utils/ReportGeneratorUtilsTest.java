@@ -46,40 +46,28 @@ public class ReportGeneratorUtilsTest {
 	 * Test method for {@link acer.coding.challenge.utils.ReportGeneratorUtils#getStudentResponseById(java.lang.String, java.util.List)}.
 	 */
 	@Test
-	public void testGetStudentResponseById() {
-		fail("Not yet implemented");
+	public void getStudentResponseByIdTest_shouldReturnResponseClass() {
+		assertEquals(TestData.getLatestStudentResponse(),ReportGeneratorUtils.getStudentResponseById("studentReponse3",TestData.getStudentResponseDetails().getListOfStudentResponses()));
 	}
 
 	/**
 	 * Test method for {@link acer.coding.challenge.utils.ReportGeneratorUtils#getOptionDetailsById(acer.coding.challenge.beans.json.Question, java.lang.String)}.
 	 */
 	@Test
-	public void testGetOptionDetailsById() {
-		fail("Not yet implemented");
+	public void getOptionDetailsByIdTest_shouldReturnQuestionOptionClass() {
+		assertEquals(TestData.getAssessmentDetails().getListOfQuestions().get(0).getQuestionConfig().getListOfOptions().get(2), ReportGeneratorUtils.getOptionDetailsById(TestData.getAssessmentDetails().getListOfQuestions().get(0),"option3"));
 	}
 
 	/**
 	 * Test method for {@link acer.coding.challenge.utils.ReportGeneratorUtils#getStudentResponseByAssessmentId(java.lang.String, java.util.List)}.
 	 */
 	@Test
-	public void testGetStudentResponseByAssessmentId() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link acer.coding.challenge.utils.ReportGeneratorUtils#getIdByLatestCompletedDate(java.util.List)}.
-	 */
-	@Test
-	public void testGetIdByLatestCompletedDate() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link acer.coding.challenge.utils.ReportGeneratorUtils#getScoreEvaluation(java.util.List, java.util.List)}.
-	 */
-	@Test
-	public void testGetScoreEvaluation() {
-		fail("Not yet implemented");
+	public void getStudentResponseByAssessmentIdTest_shouldReturnListOfStudentResponseClass() {
+		try {
+			assertEquals(TestData.getStudentResponseDetails().getListOfStudentResponses(),ReportGeneratorUtils.getStudentResponseByAssessmentId("assessment1",TestData.getStudentResponseDetails().getListOfStudentResponses()));
+		} catch (DataNotFoundException e) {
+			System.out.println();
+		}
 	}
 
 }
