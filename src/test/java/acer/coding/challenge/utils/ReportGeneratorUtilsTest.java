@@ -10,6 +10,7 @@ import org.junit.Test;
 import acer.coding.challenge.TestData;
 import acer.coding.challenge.beans.json.Question;
 import acer.coding.challenge.beans.json.Response;
+import acer.coding.challenge.exception.DataNotFoundException;
 
 /**
  * @author stefanuskj
