@@ -66,7 +66,7 @@ public class ReportGeneratorUtilsTest {
 		try {
 			assertEquals(TestData.getStudentResponseDetails().getListOfStudentResponses(),ReportGeneratorUtils.getStudentResponseByAssessmentId("assessment1",TestData.getStudentResponseDetails().getListOfStudentResponses()));
 		} catch (DataNotFoundException e) {
-			System.out.println();
+			System.out.println(e.getMessage());
 		}
 	}
 
